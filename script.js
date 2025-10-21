@@ -2,12 +2,12 @@ const display = document.getElementById("display");
 const submenu = document.getElementById("submenu");
 const extraDiv = document.getElementById("extra");
 
-// Toggle menu
+
 document.getElementById("menu").addEventListener("click", function() {
   submenu.style.display = submenu.style.display === "block" ? "none" : "block";
 });
 
-// Basic calculator functions
+
 function appendValue(value) {
   display.value += value;
 }
@@ -25,7 +25,7 @@ function calculate() {
   }
 }
 
-// Sub Menu: Scientific Mode
+
 function showScientific() {
   extraDiv.innerHTML = `
     <h4>Scientific Mode</h4>
@@ -48,7 +48,7 @@ function scientific(type) {
   else if (type === 'tan') display.value = Math.tan(val * Math.PI / 180).toFixed(3);
 }
 
-// Sub Menu: Unit Conversion
+
 function showUnitConversion() {
   extraDiv.innerHTML = `
     <h4>Unit Conversion</h4>
@@ -70,7 +70,7 @@ function convertToM() {
   display.value = (val * 1000) + " m";
 }
 
-// Sub Menu: Currency Conversion
+
 function showCurrencyConversion() {
   extraDiv.innerHTML = `
     <h4>Currency Conversion</h4>
@@ -84,7 +84,7 @@ function showCurrencyConversion() {
 
 function usdToPkr() {
   let val = document.getElementById("curVal").value;
-  display.value = (val * 280) + " PKR"; // fixed example rate
+  display.value = (val * 280) + " PKR"; 
 }
 
 function pkrToUsd() {
